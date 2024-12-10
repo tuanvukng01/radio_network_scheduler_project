@@ -29,24 +29,24 @@ A lightweight simulation tool that mimics the functionality of a 5G radio networ
 
 ```
 radio_network_scheduler_project/
-├── CMakeLists.txt          # Top-level build configuration
-├── README.md               # Project documentation
-├── build/                  # Build directory (created after running cmake)
-├── include/                # Header files
+├── CMakeLists.txt          
+├── README.md               
+├── build/                 
+├── include/               
 │   ├── scheduler.hpp
 │   ├── user.hpp
 │   ├── simulation_params.hpp
 │   └── metrics.hpp
-├── src/                    # C++ source files
+├── src/                   
 │   ├── scheduler.cpp
 │   ├── user.cpp
 │   ├── metrics.cpp
 │   ├── main.cpp
 │   └── simulation_params.cpp
-├── tests/                  # Unit tests
+├── tests/                
 │   ├── CMakeLists.txt
 │   └── test_scheduler.cpp
-└── python/                 # Python scripts
+└── python/                 
     ├── run_simulation.py
     ├── plot_results.py
     └── requirements.txt
@@ -68,7 +68,7 @@ radio_network_scheduler_project/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/radio_network_scheduler_project.git
+   git clone https://github.com/tuanvukng01/radio_network_scheduler_project.git
    cd radio_network_scheduler_project
    ```
 
@@ -82,7 +82,7 @@ radio_network_scheduler_project/
 
 3. Run the scheduler:
    ```bash
-   ./scheduler
+   src/scheduler
    ```
 
 4. Run the visualization script:
