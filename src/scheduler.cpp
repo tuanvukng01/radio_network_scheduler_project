@@ -13,19 +13,16 @@ void Scheduler::addUser(User user) {
 
 void Scheduler::runSimulation() {
     for (current_tti = 0; current_tti < params.simulation_time; ++current_tti) {
-        // Reset allocations
         for (auto &u : users) {
             u.resetAllocation();
         }
 
-        // Perform scheduling
         if (params.scheduling_algorithm == "proportional_fair") {
             scheduleProportionalFair();
         } else {
             scheduleRoundRobin();
         }
 
-        // Update throughput
         for (auto &u : users) {
             u.updateThroughput();
         }
@@ -35,7 +32,6 @@ void Scheduler::runSimulation() {
 }
 
 void Scheduler::scheduleRoundRobin() {
-    // Simple round-robin: each user gets equal share of resources
     int rb_per_user = params.total_bandwidth / (int)users.size();
     for (auto &u : users) {
         u.allocateResources(rb_per_user);
@@ -43,9 +39,7 @@ void Scheduler::scheduleRoundRobin() {
 }
 
 void Scheduler::scheduleProportionalFair() {
-    // A simplistic proportional fair: allocate based on previous throughput
-    // Lower previous throughput => more RBs.
-    // sum of 1/throughput for weighting:
+
     double sum_weights = 0.0;
     for (auto &u : users) {
         double w = 1.0 / (1.0 + u.getThroughput());
