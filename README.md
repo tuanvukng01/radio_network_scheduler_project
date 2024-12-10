@@ -136,9 +136,12 @@ Contributions are welcome! Feel free to submit issues or pull requests. For majo
 
 This project is licensed under the MIT License.
 
----
+[//]: # (---)
 
-## 👨‍💻 Author
+[//]: # ()
+[//]: # (## 👨‍💻 Author)
 
-**Your Name**  
-[GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourusername)
+[//]: # ()
+[//]: # (**Your Name**  )
+
+[//]: # ([GitHub]&#40;https://github.com/yourusername&#41; | [LinkedIn]&#40;https://linkedin.com/in/yourusername&#41;)

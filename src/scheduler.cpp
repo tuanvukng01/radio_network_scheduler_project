@@ -61,16 +61,13 @@ void Scheduler::scheduleProportionalFair() {
 void Scheduler::writeResults() {
     Metrics m = MetricsCalculator::computeMetrics(users, params.total_bandwidth);
 
-    // Open output file
     std::ofstream ofs(params.output_file);
 
-    // Write overall metrics
     ofs << "Average Throughput: " << m.average_throughput << "\n";
     ofs << "Total Throughput: " << m.total_throughput << "\n";
     ofs << "Average Latency: " << m.average_latency << "\n";
     ofs << "Resource Utilization: " << m.resource_utilization << "\n\n";
 
-    // Write per-user stats
     ofs << "User Statistics:\n";
     ofs << std::setw(10) << "User ID" << std::setw(20) << "Throughput\n";
     ofs << std::string(30, '-') << "\n";
